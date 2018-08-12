@@ -104,7 +104,7 @@ author:
   avatar           : "/assets/images/bio-photo.jpg"
   bio              : "Experienced Craftsman with a demonstrated history of working in the IT and services industry. Dabbling with crypto currency trade as a hobby."
   location         : "The Netherlands, GD"
-  email            : ""
+  email            :
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
