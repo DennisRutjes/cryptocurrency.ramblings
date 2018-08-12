@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Cryptocurrency Ramblings"
 title_separator          : "-"
 name                     : "Dennis"
-description              : "A journey of trading in crypto currencies"
+description              : "A journey of trading in crypto currency trade"
 url                      : "http://cryptocurrency.ramblings.news" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -100,11 +100,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Dennis"
+  name             : "Dennis Rutjes B Eng"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "Experienced Craftsman with a demonstrated history of working in the information technology and services industry. Skilled in Java Go, Julia. .Currently focussing on micro services and scalability in the Cloud..."
+  bio              : "Experienced Craftsman with a demonstrated history of working in the IT and services industry. Dabbling with crypto currency trade as a hobby."
   location         : "The Netherlands, GD"
-  email            :
+  email            : ""
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -119,7 +119,7 @@ author:
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : "dennis-rutjes-0097471" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
