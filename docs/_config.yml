@@ -102,10 +102,10 @@ analytics:
 author:
   name             : "Dennis Rutjes B Eng"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "Experienced Craftsman with a demonstrated history of working in the IT and services industry. Dabbling with crypto currency trade as a hobby."
+  bio              : "Experienced Craftsman with a demonstrated history of working in the IT and services industry. Dabbling with crypto currency trade as a hobby. "
   location         : "The Netherlands, GD"
   email            :
-  uri              :
+  uri              : "https://www.binance.com/?ref=35360148"
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
