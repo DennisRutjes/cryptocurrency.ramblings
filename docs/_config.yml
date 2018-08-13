@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Cryptocurrency Ramblings"
 title_separator          : "-"
 name                     : "Dennis"
-description              : "A journey about crypto currency trading."
+description              : "A journey towards crypto currency trading."
 url                      : "http://cryptocurrency.ramblings.news" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -60,7 +60,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true #, false (default)
 search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search_provider          : lunr # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
