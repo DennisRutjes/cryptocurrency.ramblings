@@ -22,7 +22,7 @@ name                     : "Dennis"
 description              : "A journey towards crypto currency trading."
 url                      : "https://cryptocurrency.ramblings.news" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : #"/cryptocurrency.ramblings" # the subpath of your site, e.g. "/blog"
-repository               : "dennisrutjes.github.io/cryptocurrency.ramblings" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : #"dennisrutjes.github.io/cryptocurrency.ramblings" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
