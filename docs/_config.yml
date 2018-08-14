@@ -13,7 +13,7 @@ repository: "cryptocurrency.ramblings/dennisrutjes.github.io"
 teaser: null
 words_per_minute: 200
 comments:
-  provider: "staticman_v2"
+  provider: "staticman"
   disqus:
     shortname: null
   discourse:
@@ -22,6 +22,8 @@ comments:
     appid: null
     num_posts: null
     colorscheme: null
+staticman:
+  branch: "master"
 atom_feed:
   path: null
 search: true
