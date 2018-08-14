@@ -6,7 +6,7 @@ read_time: true
 comments: true
 share: true
 related: true
-excerpt: cryptocurrency trading journey noob blog series
+excerpt: These upcoming weekly blog series is a journey into cryptocurrency trading for beginners. 
 ---
 
 ## Introduction
