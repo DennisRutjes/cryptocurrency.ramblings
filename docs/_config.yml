@@ -211,6 +211,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-remote-theme
+  - jekyll_admin
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -220,6 +221,7 @@ whitelist:
   - jekyll-feed
   - jemoji
   - jekyll-remote-theme
+  - jekyll_admin
 
 
 # Archives
