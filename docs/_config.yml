@@ -14,6 +14,9 @@
 remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark" #"default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+# dont show future posts
+future: false
+
 # Site Settings
 locale                   : "en-US"
 title                    : "Cryptocurrency Ramblings"
