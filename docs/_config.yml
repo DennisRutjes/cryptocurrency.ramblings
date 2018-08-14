@@ -9,7 +9,7 @@ name: Dennis Rutjes
 description: A journey towards crypto currency trading.
 url: 'https://cryptocurrency.ramblings.news'
 baseurl: null
-repository: "dennisrutjes.github.io/cryptocurrency.ramblings"
+repository: "cryptocurrency.ramblings/dennisrutjes.github.io"
 teaser: null
 words_per_minute: 200
 comments:
