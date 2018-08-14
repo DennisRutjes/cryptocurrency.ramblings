@@ -279,3 +279,7 @@ defaults:
       comments: # true
       share: true
       related: true
+
+jekyll_admin:
+  hidden_links:
+    - posts
