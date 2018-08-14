@@ -1,25 +1,26 @@
-allowedFields: ["name", "email", "url", "messages"]
-  allowedOrigins: ["localhost", "artipedia.site"]
-  branch: "master"
-  commitMessage: "Add Staticman data"
-  filename: "entry{@timestamp}"
-  format: "yaml"
-  generatedFields:
-    date:
-      type: date
-      options:
-        format: "timestamp-seconds"
-  moderation: true
-  name: "cryptocurrency.ramblings"
-  path: "_data/comments/{options.slug}"
-  requiredFields: ["name", "email", "messages"]
-  transforms:
-    email: md5
-  # reCaptcha
-  # Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
-reCaptcha:
-  enabled: true
-  siteKey: "6Lfo_GkUAAAAAOLurRwH8R9RT4S-tszQElzujhDY"
-  # Encrypt reCaptcha secret key using Staticman /encrypt endpoint
-  # For more information, https://staticman.net/docs/encryption
-  secret: "Ro6UZAQ7UtlPier1feIGOAel/ZxmjMCW6TiaPlQWh5cRUA9W6tcyLKfQ2wqjYl8VyVTZ06Yl0WAaVpn0Z6NGt30NY5zVmxuYNcVOn74yztnsflShIUaDsJCrRUtENTnj01PTS/3XpWFZOt/h9WXvy9+yrzyXiSc0vJzxoXJiU04="
+comments:
+  allowedFields: ["name", "email", "url", "messages"]
+    allowedOrigins: ["localhost", "artipedia.site"]
+    branch: "master"
+    commitMessage: "Add Staticman data"
+    filename: "entry{@timestamp}"
+    format: "yaml"
+    generatedFields:
+      date:
+        type: date
+        options:
+          format: "timestamp-seconds"
+    moderation: true
+    name: "cryptocurrency.ramblings"
+    path: "_data/comments/{options.slug}"
+    requiredFields: ["name", "email", "messages"]
+    transforms:
+      email: md5
+    # reCaptcha
+    # Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
+  reCaptcha:
+    enabled: true
+    siteKey: "6Lfo_GkUAAAAAOLurRwH8R9RT4S-tszQElzujhDY"
+    # Encrypt reCaptcha secret key using Staticman /encrypt endpoint
+    # For more information, https://staticman.net/docs/encryption
+    secret: "Ro6UZAQ7UtlPier1feIGOAel/ZxmjMCW6TiaPlQWh5cRUA9W6tcyLKfQ2wqjYl8VyVTZ06Yl0WAaVpn0Z6NGt30NY5zVmxuYNcVOn74yztnsflShIUaDsJCrRUtENTnj01PTS/3XpWFZOt/h9WXvy9+yrzyXiSc0vJzxoXJiU04="
