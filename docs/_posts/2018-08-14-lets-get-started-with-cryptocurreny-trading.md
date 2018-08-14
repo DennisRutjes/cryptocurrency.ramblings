@@ -47,4 +47,4 @@ I chose Binance (no affiliation) because :
 <br/>
 With kind regards,
 
-Dennis Rutjes B eng
+Dennis Rutjes BSc
