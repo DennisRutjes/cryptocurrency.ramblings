@@ -24,7 +24,7 @@ comments:
     colorscheme: null
 staticman:
   branch: "master"
-  path: "docs/_data/comments/{options.slug}"
+  path: "_data/comments/{options.slug}"
   allowedFields: ["name", "email", "url", "message"]
   filename: "entry{@timestamp}"
   format: "yaml"
