@@ -22,6 +22,8 @@ comments:
     appid: null
     num_posts: null
     colorscheme: null
+staticman:
+  branch: master/docs
 atom_feed:
   path: null
 search: true
