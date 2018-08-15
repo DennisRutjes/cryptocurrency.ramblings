@@ -26,13 +26,13 @@ staticman:
   branch: "master"
   path: "_data/comments/{options.slug}"
   allowedFields: ["name", "email", "url", "message"]
-  filename: "entry{@timestamp}"
-  format: "yaml"
+  filename: "comment-{@timestamp}"
+  format: "yml"
   generatedFields:
     date:
       type: date
       options:
-        format: "timestamp-seconds"
+        format: "timestamp-milliseconds"
   requiredFields: ["name", "email", "message"]
   transforms:
     email: md5
@@ -40,10 +40,10 @@ staticman:
 # Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
 reCaptcha:
   enabled: false
-  siteKey: "6Lfo_GkUAAAAAOLurRwH8R9RT4S-tszQElzujhDY"
+  #siteKey: "6Lfo_GkUAAAAAOLurRwH8R9RT4S-tszQElzujhDY"
   # Encrypt reCaptcha secret key using Staticman /encrypt endpoint
   # For more information, https://staticman.net/docs/encryption
-  secret: "Ro6UZAQ7UtlPier1feIGOAel/ZxmjMCW6TiaPlQWh5cRUA9W6tcyLKfQ2wqjYl8VyVTZ06Yl0WAaVpn0Z6NGt30NY5zVmxuYNcVOn74yztnsflShIUaDsJCrRUtENTnj01PTS/3XpWFZOt/h9WXvy9+yrzyXiSc0vJzxoXJiU04="
+  #secret: "Ro6UZAQ7UtlPier1feIGOAel/ZxmjMCW6TiaPlQWh5cRUA9W6tcyLKfQ2wqjYl8VyVTZ06Yl0WAaVpn0Z6NGt30NY5zVmxuYNcVOn74yztnsflShIUaDsJCrRUtENTnj01PTS/3XpWFZOt/h9WXvy9+yrzyXiSc0vJzxoXJiU04="
 atom_feed:
   path: null
 search: true
