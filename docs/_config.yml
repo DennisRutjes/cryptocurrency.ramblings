@@ -9,11 +9,11 @@ name: Dennis Rutjes
 description: A journey towards crypto currency trading.
 url: 'https://cryptocurrency.ramblings.news'
 baseurl: null
-repository: "DennisRutjes/cryptocurrency.ramblings"
+repository: 'DennisRutjes/cryptocurrency.ramblings'
 teaser: null
 words_per_minute: 200
 comments:
-  provider: "staticman_v2"
+  provider: 'staticman_v2'
   disqus:
     shortname: null
   discourse:
@@ -23,7 +23,14 @@ comments:
     num_posts: null
     colorscheme: null
 staticman:
-  branch: "master"
+  allowedFields: ['name', 'email', 'url', 'message']
+  branch: gh-pages
+  commitMessage: 'Hey human, here is a new entry.'
+  filename: 'entry{@timestamp}'
+  format: yml
+  moderation: true
+  path: '_data/comments/{options.slug}'
+  requiredFields: ['name', 'title', 'description', 'rating']
 atom_feed:
   path: null
 search: true
