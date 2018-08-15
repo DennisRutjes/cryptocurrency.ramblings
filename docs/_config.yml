@@ -38,8 +38,8 @@ staticman:
     email: md5
 # reCaptcha
 # Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
-reCaptcha:
-  enabled: false
+#reCaptcha:
+ # enabled: false
   #siteKey: "6Lfo_GkUAAAAAOLurRwH8R9RT4S-tszQElzujhDY"
   # Encrypt reCaptcha secret key using Staticman /encrypt endpoint
   # For more information, https://staticman.net/docs/encryption
