@@ -13,7 +13,7 @@ repository: 'DennisRutjes/cryptocurrency.ramblings'
 teaser: null
 words_per_minute: 200
 comments:
-  provider: 'staticman'
+  provider: 'staticman_v2'
   disqus:
     shortname: null
   discourse:
@@ -23,13 +23,13 @@ comments:
     num_posts: null
     colorscheme: null
 staticman:
-  branch: "gh_pages"
+  branch: "master"
   moderation: true
   path: "_data/comments/{options.slug}"
   commitMessage: "New comment by {fields.name}"
   allowedFields: ["name", "email", "url", "message"]
   filename: "comment-{@timestamp}"
-  format: "yml"
+  format: "yaml"
   generatedFields:
     date:
       type: date
