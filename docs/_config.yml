@@ -27,6 +27,12 @@ staticman:
   path: "docs/_data/comments/{options.slug}"
   allowedFields: ["name", "email", "url", "message"]
   filename: "entry{@timestamp}"
+  format: "yaml"
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "timestamp-seconds"
   requiredFields: ["name", "email", "message"]
   transforms:
     email: md5
