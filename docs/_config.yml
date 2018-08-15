@@ -25,7 +25,7 @@ comments:
 staticman:
   branch: "gh_pages"
   moderation: true
-  path: "docs/_data/comments/{options.slug}"
+  path: "/_data/comments/{options.slug}"
   commitMessage: "New comment by {fields.name}"
   allowedFields: ["name", "email", "url", "message"]
   filename: "comment-{@timestamp}"
