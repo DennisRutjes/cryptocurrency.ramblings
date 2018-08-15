@@ -24,6 +24,12 @@ comments:
     colorscheme: null
 staticman:
   branch: "master"
+  path: "_data/comments/{options.slug}"
+  allowedFields: ["name", "email", "url", "message"]
+  filename: "entry{@timestamp}"
+  requiredFields: ["name", "email", "message"]
+  transforms:
+    email: md5
 # reCaptcha
 # Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
 reCaptcha:
