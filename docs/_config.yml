@@ -23,7 +23,7 @@ comments:
     num_posts: null
     colorscheme: null
 staticman:
-  branch: "master"
+  branch: "gh_pages"
   path: "_data/comments/{options.slug}"
   commitMessage: "New comment by {fields.name}"
   allowedFields: ["name", "email", "url", "message"]
