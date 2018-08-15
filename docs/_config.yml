@@ -25,6 +25,7 @@ comments:
 staticman:
   branch: "master"
   path: "_data/comments/{options.slug}"
+  commitMessage: "New comment by {fields.name}"
   allowedFields: ["name", "email", "url", "message"]
   filename: "comment-{@timestamp}"
   format: "yml"
