@@ -23,7 +23,7 @@ comments:
     num_posts: null
     colorscheme: null
 staticman:
-  branch: gh_pages
+  branch: master
 atom_feed:
   path: null
 search: true
