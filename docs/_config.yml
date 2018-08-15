@@ -23,7 +23,7 @@ comments:
     num_posts: null
     colorscheme: null
 staticman:
-  branch: master/docs
+  branch: master
 atom_feed:
   path: null
 search: true
