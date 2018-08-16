@@ -23,29 +23,29 @@ comments:
     num_posts: null
     colorscheme: null
 staticman:
-  allowedFields: ['name', 'email', 'url', 'message', 'replying_to']
   branch: "master"
-  commitMessage: # "New comment by {fields.name}"
-  filename: comment-{@timestamp}
+  moderation: false
+  path: "_data/comments/{options.slug}"
+  commitMessage: "New comment by {fields.name}"
+  allowedFields: ["name", "email", "url", "message", "replying_to"]
+  filename: "comment-{@timestamp}"
   format: "yml"
-  moderation: true
-  path: "/_data/comments/{options.slug}" (default)
-  requiredFields: ['name', 'email', 'message']
-  transforms:
-    email: "md5"
   generatedFields:
     date:
-      type: "date"
+      type: date
       options:
-        format: "iso8601" #(default), "timestamp-seconds", "timestamp-milliseconds"
+        format: "timestamp-milliseconds"
+  requiredFields: ["name", "email", "message"]
+  transforms:
+    email: md5
   # reCaptcha
   # Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
-  #reCaptcha:
-  # enabled: false
-  #siteKey: "6Lfo_GkUAAAAAOLurRwH8R9RT4S-tszQElzujhDY"
+#reCaptcha:
+#  enabled: false
+#  siteKey: "6Lfo_GkUAAAAAOLurRwH8R9RT4S-tszQElzujhDY"
   # Encrypt reCaptcha secret key using Staticman /encrypt endpoint
   # For more information, https://staticman.net/docs/encryption
-  #secret: "Ro6UZAQ7UtlPier1feIGOAel/ZxmjMCW6TiaPlQWh5cRUA9W6tcyLKfQ2wqjYl8VyVTZ06Yl0WAaVpn0Z6NGt30NY5zVmxuYNcVOn74yztnsflShIUaDsJCrRUtENTnj01PTS/3XpWFZOt/h9WXvy9+yrzyXiSc0vJzxoXJiU04="
+#  secret: "Ro6UZAQ7UtlPier1feIGOAel/ZxmjMCW6TiaPlQWh5cRUA9W6tcyLKfQ2wqjYl8VyVTZ06Yl0WAaVpn0Z6NGt30NY5zVmxuYNcVOn74yztnsflShIUaDsJCrRUtENTnj01PTS/3XpWFZOt/h9WXvy9+yrzyXiSc0vJzxoXJiU04="
 atom_feed:
   path: null
 search: true
@@ -84,7 +84,7 @@ author:
   avatar: /assets/images/bio-photo.jpg
   bio: >-
     Experienced Craftsman with a demonstrated history of working in the IT and
-    services industry. Dabbling with crypto currency trade as a hobby. 
+    services industry. Dabbling with crypto currency trade as a hobby.
   location: 'The Netherlands, GD'
   email: null
   uri: 'https://www.binance.com/?ref=35360148'
