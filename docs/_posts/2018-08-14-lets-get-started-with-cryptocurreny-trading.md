@@ -7,6 +7,7 @@ comments: true
 share: true
 related: true
 excerpt: These upcoming weekly blog series is a journey into cryptocurrency trading for beginners. 
+classes: wide
 ---
 
 ## Introduction
