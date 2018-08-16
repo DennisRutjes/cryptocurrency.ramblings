@@ -28,7 +28,7 @@ staticman:
   path: "docs/_data/comments/{options.slug}"
   commitMessage: "New comment by {fields.name}"
   allowedFields: ["name", "email", "url", "message", "replying_to"]
-  filename: "comment-{@timestamp}"
+  filename: "entry{@timestamp}"
   format: "yaml"
   generatedFields:
     date:
