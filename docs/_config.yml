@@ -27,7 +27,7 @@ staticman:
   moderation: true
   path: '_data/comments/{options.slug}'
   commitMessage: 'New comment by {fields.name}'
-  allowedFields: ['name', 'email', 'url', 'message','reply_to']
+  allowedFields: ['name', 'email', 'url', 'message','parent']
   filename: 'comment-{@timestamp}'
   format: 'yml'
   generatedFields:
