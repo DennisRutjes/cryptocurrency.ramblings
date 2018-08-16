@@ -23,29 +23,29 @@ comments:
     num_posts: null
     colorscheme: null
 staticman:
+  allowedFields: ['name', 'email', 'url', 'message','replying_to']
   branch: "master"
+  commitMessage: # "New comment by {fields.name}"
+  filename: comment-{@timestamp}
+  format: "yml"
   moderation: true
-  path: "docs/_data/comments/{options.slug}"
-  commitMessage: "New comment by {fields.name}"
-  allowedFields: ["name", "email", "url", "message", "replying_to"]
-  filename: "entry{@timestamp}"
-  format: "yaml"
+  path: "/_data/comments/{options.slug}" (default)
+  requiredFields: ['name', 'email', 'message']
+  transforms:
+    email: "md5"
   generatedFields:
     date:
-      type: date
+      type: "date"
       options:
-        format: "iso8601"
-  requiredFields: ["name", "email", "message"]
-  transforms:
-    email: md5
+        format: "iso8601" #(default), "timestamp-seconds", "timestamp-milliseconds"
   # reCaptcha
   # Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
-#reCaptcha:
-#  enabled: false
-#  siteKey: "6Lfo_GkUAAAAAOLurRwH8R9RT4S-tszQElzujhDY"
-#  # Encrypt reCaptcha secret key using Staticman /encrypt endpoint
-#  # For more information, https://staticman.net/docs/encryption
-#  secret: "Ro6UZAQ7UtlPier1feIGOAel/ZxmjMCW6TiaPlQWh5cRUA9W6tcyLKfQ2wqjYl8VyVTZ06Yl0WAaVpn0Z6NGt30NY5zVmxuYNcVOn74yztnsflShIUaDsJCrRUtENTnj01PTS/3XpWFZOt/h9WXvy9+yrzyXiSc0vJzxoXJiU04="
+  #reCaptcha:
+  # enabled: false
+  #siteKey: "6Lfo_GkUAAAAAOLurRwH8R9RT4S-tszQElzujhDY"
+  # Encrypt reCaptcha secret key using Staticman /encrypt endpoint
+  # For more information, https://staticman.net/docs/encryption
+  #secret: "Ro6UZAQ7UtlPier1feIGOAel/ZxmjMCW6TiaPlQWh5cRUA9W6tcyLKfQ2wqjYl8VyVTZ06Yl0WAaVpn0Z6NGt30NY5zVmxuYNcVOn74yztnsflShIUaDsJCrRUtENTnj01PTS/3XpWFZOt/h9WXvy9+yrzyXiSc0vJzxoXJiU04="
 atom_feed:
   path: null
 search: true
@@ -206,6 +206,6 @@ defaults:
     layout: single
     author_profile: true
     read_time: true
-    comments: false
+    comments: true
     share: true
     related: true
