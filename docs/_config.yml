@@ -23,7 +23,7 @@ comments:
     num_posts: null
     colorscheme: null
 staticman:
-  allowedFields: ['name', 'email', 'url', 'message','replying_to']
+  allowedFields: ['name', 'email', 'url', 'message', 'replying_to']
   branch: "master"
   commitMessage: # "New comment by {fields.name}"
   filename: comment-{@timestamp}
