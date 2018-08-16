@@ -24,10 +24,10 @@ comments:
     colorscheme: null
 staticman:
   branch: 'master'
-  moderation: false
+  moderation: true
   path: '_data/comments/{options.slug}'
   commitMessage: 'New comment by {fields.name}'
-  allowedFields: ['name', 'email', 'url', 'message', 'replying_to']
+  allowedFields: ['name', 'email', 'url', 'message']
   filename: 'comment-{@timestamp}'
   format: 'yml'
   generatedFields:
@@ -38,14 +38,14 @@ staticman:
   requiredFields: ['name', 'email', 'message']
   transforms:
     email: md5
-  # reCaptcha
-  # Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
+# reCaptcha
+# Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
 #reCaptcha:
-#  enabled: false
-#  siteKey: '6Lfo_GkUAAAAAOLurRwH8R9RT4S-tszQElzujhDY'
+ # enabled: false
+  #siteKey: '6Lfo_GkUAAAAAOLurRwH8R9RT4S-tszQElzujhDY'
   # Encrypt reCaptcha secret key using Staticman /encrypt endpoint
   # For more information, https://staticman.net/docs/encryption
-#  secret: 'Ro6UZAQ7UtlPier1feIGOAel/ZxmjMCW6TiaPlQWh5cRUA9W6tcyLKfQ2wqjYl8VyVTZ06Yl0WAaVpn0Z6NGt30NY5zVmxuYNcVOn74yztnsflShIUaDsJCrRUtENTnj01PTS/3XpWFZOt/h9WXvy9+yrzyXiSc0vJzxoXJiU04='
+  #secret: 'Ro6UZAQ7UtlPier1feIGOAel/ZxmjMCW6TiaPlQWh5cRUA9W6tcyLKfQ2wqjYl8VyVTZ06Yl0WAaVpn0Z6NGt30NY5zVmxuYNcVOn74yztnsflShIUaDsJCrRUtENTnj01PTS/3XpWFZOt/h9WXvy9+yrzyXiSc0vJzxoXJiU04='
 atom_feed:
   path: null
 search: true
@@ -84,7 +84,7 @@ author:
   avatar: /assets/images/bio-photo.jpg
   bio: >-
     Experienced Craftsman with a demonstrated history of working in the IT and
-    services industry. Dabbling with crypto currency trade as a hobby.
+    services industry. Dabbling with crypto currency trade as a hobby. 
   location: 'The Netherlands, GD'
   email: null
   uri: 'https://www.binance.com/?ref=35360148'
@@ -113,35 +113,35 @@ author:
   xing: null
   youtube: null
 include:
-- .htaccess
-- _pages
+  - .htaccess
+  - _pages
 exclude:
-- '*.sublime-project'
-- '*.sublime-workspace'
-- vendor
-- .asset-cache
-- .bundle
-- .jekyll-assets-cache
-- .sass-cache
-- assets/js/plugins
-- assets/js/_main.js
-- assets/js/vendor
-- Capfile
-- CHANGELOG
-- config
-- Gemfile
-- Gruntfile.js
-- gulpfile.js
-- LICENSE
-- log
-- node_modules
-- package.json
-- Rakefile
-- README
-- tmp
+  - '*.sublime-project'
+  - '*.sublime-workspace'
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
 keep_files:
-- .git
-- .svn
+  - .git
+  - .svn
 encoding: utf-8
 markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
 markdown: kramdown
@@ -167,21 +167,21 @@ paginate: 5
 paginate_path: '/blog/page:num/'
 timezone: null
 plugins:
-- jekyll-paginate
-- jekyll-sitemap
-- jekyll-gist
-- jekyll-feed
-- jemoji
-- jekyll-remote-theme
-- jekyll_admin
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-remote-theme
+  - jekyll_admin
 whitelist:
-- jekyll-paginate
-- jekyll-sitemap
-- jekyll-gist
-- jekyll-feed
-- jemoji
-- jekyll-remote-theme
-- jekyll_admin
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-remote-theme
+  - jekyll_admin
 category_archive:
   type: liquid
   path: /categories/
@@ -193,19 +193,19 @@ compress_html:
   ignore:
     envs: development
 defaults:
-- scope:
-    path: ''
-    type: pages
-  values:
-    layout: single
-    author_profile: true
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: single
-    author_profile: true
-    read_time: true
-    comments: true
-    share: true
-    related: true
+  - scope:
+      path: ''
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
