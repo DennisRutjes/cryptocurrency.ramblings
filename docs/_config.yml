@@ -24,7 +24,7 @@ comments:
     colorscheme: null
 staticman:
   branch: "master"
-  moderation: true
+  moderation: false
   path: "_data/comments/{options.slug}"
   commitMessage: "New comment by {fields.name}"
   allowedFields: ["name", "email", "url", "message","replying_to"]
