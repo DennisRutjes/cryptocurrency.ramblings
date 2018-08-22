@@ -19,10 +19,10 @@ tags: beginner cryptocurrency binance trading
 ## TL;DR
 With this second post in our trading journey with cryptocurrencies, I will cover:
 
-* why I chose Binance,
-* sign up into binance,
-* brief tour of the Binane web interface,
-* get some bitcoins on your account.
+* why I chose Binance
+* sign up into binance
+* brief tour of the Binane web interface
+* get some bitcoins on your account
 
 ## Why Binance?
 
