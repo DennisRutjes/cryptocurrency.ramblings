@@ -26,10 +26,10 @@ With this second post in our trading journey with cryptocurrencies, I will cover
 
 ## Why Binance?
 
-1. Binance is the largest cryptocurrency exchange in the world. They offer in excess of 380 tradable assets.
-2. They have a low transaction fee 0.1% trading fee, even lower if you use the BNB currency as a transaction fee.
-3. Good programming API interface.
-4. Sometimes they have a trading lottery contest or coin drops, I have been fortunate enough to get some coins on both occasions.
+1. Binance is the largest cryptocurrency exchange in the world. They offer in excess of 380 tradable assets
+2. They have a low transaction fee 0.1% trading fee, even lower if you use the BNB currency as a transaction fee
+3. Good programming API interface
+4. Sometimes they have a trading lottery contest or coin drops, I have been fortunate enough to get some coins on both occasions
 
 ## Signing up
 
@@ -97,7 +97,7 @@ Don't copy my address they serve as an example unless you want to make a donatio
 
 ![Balances]({{ "/assets/images/funds-deposit.png" | relative_url }})
 
-For extra measure do a ctr-f (Windows) cmd+f (Osx) in the screen and make sure that the entirety of the address is selected when found.
+For extra measure do a ctr-f (Windows) cmd+f (Osx) paste the address in the search box on the screen and make sure that the entirety of the address is selected when found.
 
 
 <img class="img-left" style="background-color:white;padding:2px;width:114px;float:right" titel="binance BTC address" alt="binance btc address 1GdzNxjGDfWjjt2mdK9zJL9FxP4UCEuiZd" src="/assets/images/btc-deposit-address.png"/>
