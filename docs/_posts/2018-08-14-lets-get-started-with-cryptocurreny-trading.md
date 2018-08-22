@@ -6,8 +6,13 @@ read_time: true
 comments: true
 share: true
 related: true
-excerpt: These upcoming weekly blog series is a journey into cryptocurrency trading for beginners. 
+header:
+  teaser: "/assets/images/binance.png"
+excerpt: These upcoming weekly blog series is a journey into cryptocurrency trading
+  for beginners.
 classes: wide
+category: cryprocurrency trading
+tags: beginner cryptocurrency binance trading
 ---
 
 ## Introduction
@@ -29,7 +34,10 @@ Some rules into crypto trading are applicable I will state them here:
 1. Don't blame me if there's is a loss in your account balances, these series are just experiments with perhaps an accidental profit :-)
 
 ## Binance
-You can join me for the series using [Binance Exchange](https://www.binance.com/?ref=35360148), this is a referrer link so when you sign up not all the trading transaction fees are going to Binance :-)
+<img class="img-left" style="background-color:white;padding:2px;width:114px;float:right" titel="binance signup referral" alt="binance signup referral" src="/assets/images/qr.jpg"/>
+
+You can join me for the series using [Binance Exchange](https://www.binance.com/?ref=35360148), 
+this is a referrer link so when you sign up not all the trading transaction fees are going to Binance :-)
 
 ![Binance Trading Page]({{ "/assets/images/binance.png" | absolute_url }})
 
