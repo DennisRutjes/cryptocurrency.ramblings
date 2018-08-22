@@ -99,11 +99,12 @@ Don't copy my address they serve as an example unless you want to make a donatio
 
 For extra measure do a ctr-f (Windows) cmd+f (Osx) in the screen and make sure that the entirety of the address is selected when found.
 
-if you can use the QR code on your phone use that as your wallet address selector.
 
 <img class="img-left" style="background-color:white;padding:2px;width:114px;float:right" titel="binance BTC address" alt="binance btc address 1GdzNxjGDfWjjt2mdK9zJL9FxP4UCEuiZd" src="/assets/images/btc-deposit-address.png"/>
 
-If you have an existing wallet with an adequate amount of BTC, you can transfer directly to the Binance wallet address using the QR address code or the copied address from the website.
+If you can use the QR code on your phone use that as your wallet address selector.
+
+In case of an existing wallet with an adequate amount of BTC, you can transfer directly to the Binance wallet address using the QR address code or the copied address from the website.
 
 ### Buying bitcoins
 
