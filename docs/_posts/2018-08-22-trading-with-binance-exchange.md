@@ -26,6 +26,8 @@ With this second post in our trading journey with cryptocurrencies, I will cover
 
 ## Why Binance?
 
+<img class="img-left" title="381 assets, font size related to trading volume." style=";margin:40px;width:150px;float:left" src="/assets/images/cryptocurrencies.png"/>
+
 1. Binance is the largest cryptocurrency exchange in the world. They offer in excess of 380 tradable assets
 2. They have a low transaction fee 0.1% trading fee, even lower if you use the BNB currency as a transaction fee
 3. Good programming API interface
