@@ -63,8 +63,8 @@ When you have selected an interval the so-called candlestick graph is shown, wit
 The individual candles represent the open(O) price at the beginning of the interval, the close(C) price at the end of the interval 
 and the high(H) and low(L) prices.
 
-* <img class="img-left" style="width:40px" alt="binance signup referral" src="/assets/images/green-candle.png"/>  close(C) price greather then (>)  greater than open(O) price, upward trend. 
-* <img class="img-left" style="width:40px" alt="binance signup referral" src="/assets/images/red-candle.png"/> close(H) price greather then (>)  greater than open(C) price, downward trend.
+* <img class="img-left" style="width:40px" alt="binance signup referral" src="/assets/images/green-candle.png"/>  close(C) price greather then (>) open(O) price, upward trend. 
+* <img class="img-left" style="width:40px" alt="binance signup referral" src="/assets/images/red-candle.png"/> open(O) price greather then (>)  close(C) price, downward trend.
 
 In the next post, we will use [Julialang](https://julialang.org/) to identify the interesting candlestick combinations and  how to choose your asset portfolio.
 
