@@ -1,5 +1,5 @@
 ---
-title: Trading with Binance exchange for beginners
+title: Binance exchange for beginners
 layout: single
 author_profile: true
 read_time: true
@@ -11,12 +11,12 @@ header:
   caption: 
   overlay_filter: rgba(37, 42, 52, 0.5)
   teaser: "/assets/images/cryptocurrencies.png"
-excerpt: Weekly blog series is a journey into cryptocurrency trading for beginners, this week up and running with Binance.
+excerpt: "This weekly blog series is a journey into cryptocurrency trading for beginners, this week: up and running with Binance."
 classes: wide
 category: cryprocurrency trading
 tags: beginner cryptocurrency binance trading
 ---
-## TL;DR
+## tl;dr
 With this second post in our trading journey with cryptocurrencies, I will cover:
 
 * why I chose Binance
