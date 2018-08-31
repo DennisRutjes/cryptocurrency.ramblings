@@ -25,7 +25,7 @@ Below we see the basic binance exchange trading view, we will cover all the part
 ![Binance Trading View Basic]({{ "/assets/images/trading-view-basic.jpg" | relative_url }})
 
 ## news area
-Here is the small news ticker of Binance for a more detailed view click on the [news](https://support.binance.com/hc/en-us/categories/115000056351) link.
+Here is the small news ticker of Binance news, for a more detailed view click on the [news](https://support.binance.com/hc/en-us/categories/115000056351) link.
 
 Currently, there is a NULS Competition going on with 50,000 NULS giveaway! 
 
