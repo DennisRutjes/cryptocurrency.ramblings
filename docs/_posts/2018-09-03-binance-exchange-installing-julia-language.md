@@ -32,7 +32,8 @@ To interact with Julia we have the following options:
  * Julia REPL console, this is Sparta!!
  * Jupyter notebook
  * Visual Studio code with Julia Plugin, currently with version 1.0 there are issues [error](https://github.com/JuliaEditorSupport/julia-vscode/issues/537)
- * Atom editor + Julia-client provides the best visual integration *)
+ * Atom editor + Julia-client provides the best visual integration *) []Juno IDE](http://junolab.org) 
+
 
 *) for starters the atom editor is recommended.
 
