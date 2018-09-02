@@ -1,13 +1,10 @@
-#=
-note_book_install:
-- Julia version: 
-- Author: drutjes
-- Date: 2018-08-18
-=#
+import Pkg
+Pkg.add("PlotThemes")
+Pkg.add("Plots")
 
-import Pkg;
+using Plots
+theme(:dark)
+gr()
+plot(Plots.fakedata(50,5),w=3)
 
-if get(Pkg.installed(),"IJulia",-1) == -1
-    Pkg.add("IJulia")
-end
 
