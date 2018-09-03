@@ -54,6 +54,8 @@ TL;DR below the results using Julia, we will use BTC has a base currency in comb
 
 when using a notebook server : [Jupyter NoteBook](https://github.com/DennisRutjes/cryptocurrency.ramblings/blob/master/julia/notebooks/binance1.ipynb)
 
+Values may differ due to running scripts at a different time.
+
 ## Adding packages.
 
 
