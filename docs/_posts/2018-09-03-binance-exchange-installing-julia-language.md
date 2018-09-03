@@ -41,7 +41,7 @@ To interact with Julia we have the following options:
 ## Julia Read Eval Print Loop (REPL)
 
 This is the initial environment after executing Julia, for example I can start the Jupyter notebook server from this REPL.
-The Julia cmd can be used to start script files and the REPL to do quick evaluation of calculation. 
+The Julia cmd can be used to start script files and the REPL to do quick evaluation of calculations. 
 
 ![Julialang Jupyter]({{ "/assets/images/julia-jupyter.png" | relative_url }})
 
