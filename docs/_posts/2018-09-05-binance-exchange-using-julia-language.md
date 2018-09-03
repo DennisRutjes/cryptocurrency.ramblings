@@ -25,7 +25,7 @@ In this post we will gather data via the Binance API with Julia.
 
 The question we are asking : 'What currency should I choose to trade in?' 
 
-The following are available to us using Binance exchange :
+The following currencies are available to us using Binance exchange :
 
 * BTC, Bitcoin [market](https://coinmarketcap.com/currencies/bitcoin/)
 * ETH, Ethereum [market](https://coinmarketcap.com/currencies/ethereum/)
@@ -34,9 +34,11 @@ The following are available to us using Binance exchange :
 
 We will investigate the total assets / currency and calculate the total traded volume, we will make a nice graph from the data all with Julia :-) to get some insights.
 
-TL;DR below the results using Julia, we will use BTC has a base currency in combination with large trade volumes and largest asset number
+TL;DR 
 
-| Row | Symbol     | Value($) | Assets    | sum(quoteVolume) | USDT(millions)|
+Below the results using Julia, we will use BTC has a base currency in combination with large trade volumes and largest asset number
+
+| Ranking | Symbol     | Value($) | Assets    | sum(quoteVolume) | USDT(millions)|
 |:----|:-----------|---------:|----------:|----------:|--------:|
 | 1   | BTC        | 7282.26      | 148       | 50927.3     | 370.866         |
 | 2   | ETH        | 289.72      | 145       | 1.47129e5   | 42.6261         |
