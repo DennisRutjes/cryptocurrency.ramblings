@@ -36,18 +36,14 @@ We will investigate the total assets / currency and calculate the total traded v
 
 TL;DR below the results using Julia, we will use BTC has a base currency in combination with large trade volumes and largest asset number
 
-| Symbol    | Value($) | Assets   | sum(quoteVolume) | USDT(millions)|
-|:--------|------------:|--------:|----------:|--------:|
-| ETHUSDT | $ 289.03    | 145     | 1.45758e5 | 42.1285  
-| BTCUSDT | $ 7287.36   | 148     | 50810.8   | 370.276 
-| BNBUSDT | $ 11.2911   | 76      | 2.19781e5 | 2.48157
-| USDT    | $ 1.00      | 20      | 5.52698e8 | 552.698    
-|
-
-
+| Row | Symbol     | Value($) | Assets    | sum(quoteVolume) | USDT(millions)|
+|:----|:-----------|---------:|----------:|----------:|--------:|
+| 1   | BTC        | 7282.26      | 148       | 50927.3     | 370.866         |
+| 2   | ETH        | 289.72      | 145       | 1.47129e5   | 42.6261         |
+| 3   | BNB        | 11.30      | 76        | 2.17332e5   | 2.45587         |
+| 4   | USDT       | 1.00    | 20        | 5.52313e8   | 552.313         |
 
 ![Distribution Trading Volume]({{ "/assets/images/piechart1.svg" | relative_url }})
-
 
 
 # Julia code snippets, copy paste in your IDE
