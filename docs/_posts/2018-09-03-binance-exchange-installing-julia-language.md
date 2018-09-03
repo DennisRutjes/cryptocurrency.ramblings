@@ -82,7 +82,7 @@ Below is the end result, the jupyter server has started kernel Julia 1.0
 ## Visual Studio Code and Julia plugin
 Install Microsofts [Visual Studio Code](https://code.visualstudio.com) and the Julia plugin, things (currently only for version 0.6.x) should work out of the box when Julia is on your PATH or installed in the default directory.
 
-![Visual Code]({{ "/assets/images/visual-studio-code-julia.PNG" | relative_url }})
+![Visual Code]({{ "/assets/images/visual-studio-code-julia.png" | relative_url }})
 
 ## Atom editor with the Julia-client plugin
 Also, Atom provides a decent Julia integration a may suit your needs, the editor's styling is really beautiful.
