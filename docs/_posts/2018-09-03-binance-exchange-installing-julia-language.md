@@ -50,7 +50,6 @@ The Julia cmd can be used to start script files and the REPL to do quick evaluat
 Installation as a notebook server has the advantage that no 3rd party software outside Julia ecosystem are necessary.
 
 ```julia
-
 import Pkg;
 # check if IJulia is installed.
 if get(Pkg.installed(),"IJulia",-1) == -1
@@ -65,7 +64,6 @@ notebook()
 Test snippet performed on each julia development environment.
 
 ```julia
-
 import Pkg
 Pkg.add("PlotThemes")
 Pkg.add("Plots")
