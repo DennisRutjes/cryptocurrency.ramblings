@@ -32,8 +32,9 @@ The following are available to us using Binance exchange :
 * BNB, Binance coin [market](https://coinmarketcap.com/currencies/binance-coin/)
 * USDT, Tether [market](https://coinmarketcap.com/currencies/tether/)
 
-We will investigate to total assets / currency and calculate the total traded volume, we will make a nice graph from the data all with Julia :-) to get some insights.
+We will investigate the total assets / currency and calculate the total traded volume, we will make a nice graph from the data all with Julia :-) to get some insights.
 
+TL;DR below the results using Julia, we will use BTC has a base currency in combination with large trade volumes and largest asset number
 
 | Symbol    | Value($) | Assets   | sum(quoteVolume) | USDT(millions)|
 |:--------|------------:|--------:|----------:|--------:|
@@ -43,7 +44,7 @@ We will investigate to total assets / currency and calculate the total traded vo
 | USDT    | $ 1.00      | 20      | 5.52698e8 | 552.698    
 |
 
-TL;DR We use BTC has a base currency, large trade volume and largest asset number
+
 
 ![Distribution Trading Volume]({{ "/assets/images/piechart1.svg" | relative_url }})
 
