@@ -19,12 +19,12 @@ tags: beginner cryptocurrency julia jupyter
 ---
 
 
-## Julia lang
+# Julia lang
 Julia language is a scripted language with a twist. The scripts get compiled and are super fast! The syntax is easy to learn, I will provide with the necessary code snippets to get stuff done.
 
 Julia is used in the domains of data science, machine learning, financial markets and has a nice plotting interface and its free!
 
-# Install Julia lang
+## Install Julia lang
 Head down to [Julialang](https://julialang.org/) website and click the download link for version 1.0, click on the executable to get started. 
 
 To interact with Julia we have the following options:
