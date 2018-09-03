@@ -57,7 +57,7 @@ if get(Pkg.installed(),"IJulia",-1) == -1
 end
 
 # start notebook server
-using Julia
+using IJulia
 notebook()
 ``` 
 
