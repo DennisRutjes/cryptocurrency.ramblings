@@ -1,5 +1,5 @@
 ---
-title: Binance exchange  Installing Julia
+title: Binance exchange, installing Julia
 layout: single
 author_profile: true
 read_time: true
