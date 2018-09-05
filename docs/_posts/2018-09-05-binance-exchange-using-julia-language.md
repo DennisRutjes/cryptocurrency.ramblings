@@ -18,25 +18,25 @@ category: programming julia julialang
 tags: beginner cryptocurrency julia jupyter 
 ---
 
-
 ## Julia lang
 We will be using the [Juno IDE](http://junolab.org) (atom + plugin) see post about [installing julia](https://cryptocurrency.ramblings.news/programming%20julia%20julialang/2018/09/03/binance-exchange-installing-julia-language.html) 
-In this post we will gather data via the Binance API with Julia.
 
-The question we are asking : 'What currency should I choose to trade in?' 
+In this post we will gather data via the Binance API with Julia to determine, what currency is the best to trade in?
 
-The following currencies are available to us using Binance exchange :
+The answer depends on total assets number an total trade volume.
+
+The following currencies are available when using Binance exchange :
 
 * BTC, Bitcoin [market](https://coinmarketcap.com/currencies/bitcoin/)
 * ETH, Ethereum [market](https://coinmarketcap.com/currencies/ethereum/)
 * BNB, Binance coin [market](https://coinmarketcap.com/currencies/binance-coin/)
 * USDT, Tether [market](https://coinmarketcap.com/currencies/tether/)
 
-We will investigate the total assets / currency and calculate the total traded volume, we will make a nice graph from the data all with Julia :-) to get some insights.
+We will investigate the total assets / currency and calculate the total traded volume, and we will make a nice graph from the data all with Julia :-) to get some insights.
 
 TL;DR 
 
-Below the results using Julia, we will use BTC has a base currency in combination with large trade volumes and largest asset number
+Below are the results using Julia for the impatient, we will use BTC has a base currency due to large trade volumes and largest asset number
 
 | Ranking | Symbol     | Value($) | Assets    | sum(quoteVolume) | USDT(millions)|
 |:----|:-----------|---------:|----------:|----------:|--------:|
@@ -47,6 +47,8 @@ Below the results using Julia, we will use BTC has a base currency in combinatio
 
 ![Distribution Trading Volume]({{ "/assets/images/piechart1.svg" | relative_url }})
 
+
+If you want to verify the outcome yourself, below is the number crunching code.
 
 # Julia code snippets, copy paste in your IDE
 
