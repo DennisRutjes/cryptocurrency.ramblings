@@ -26,7 +26,6 @@ So without further ado the first simple strategy.
 # Follow the loser strategy, is it a winner?
 Every strategy has the intention to buy low and sell high ;-), to spread the risk don't put all your BTC on one asset!
 Why not investigate which assets are relatively low compared to their historic minimum and buy those? What comes down must go up?
-
 ## strategy implementation
 
 1. we will be using BTC as a base currency, see the previous post
@@ -58,10 +57,9 @@ step 4: seems ADABTC is a good candidate! lets go with that one!
 steps 5 and 6 will be done during this month, the results will be posted next month or so, see you then!
 
     
-# Julia code :
+# [Julialang](https://julialang.org/) v1.0 code 
 
 ## Installing default packages
-
 
 ```julia
 using Pkg;
