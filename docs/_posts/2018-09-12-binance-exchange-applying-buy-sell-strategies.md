@@ -59,7 +59,9 @@ steps 5 and 6 will be done during this month, the results will be posted next mo
     
 # [Julialang](https://julialang.org/) v1.0 code 
 
+
 ## Installing default packages
+
 
 ```julia
 using Pkg;
@@ -73,51 +75,31 @@ for package in packages
         Pkg.add(package)
     end
 end
+
+using Pkg;
+Pkg.add(PackageSpec(url="https://github.com/DennisRutjes/Binance.jl",rev="master"));
+
+ENV["BINANCE_APIKEY"] = "N.A.";
+ENV["BINANCE_SECRET"] = "N.A.";
+
 ```
 
-## Creating generic functions for Binance API data retrieval
+    [32m[1m  Updating[22m[39m registry at `~/.julia/registries/General`
+    [32m[1m  Updating[22m[39m git-repo `https://github.com/JuliaRegistries/General.git`
+    [?25l[2K[?25h[32m[1m  Updating[22m[39m git-repo `https://github.com/DennisRutjes/Binance.jl`
+    [?25l[2K[?25h[32m[1m Resolving[22m[39m package versions...
+    [32m[1m  Updating[22m[39m `~/.julia/environments/v1.0/Project.toml`
+    [90m [no changes][39m
+    [32m[1m  Updating[22m[39m `~/.julia/environments/v1.0/Manifest.toml`
+    [90m [no changes][39m
+
+
+## Creating generic functions for Binance API data to DataFrame conversion
 
 
 ```julia
-# show all data for a given value
-function showAll(value)
-    show(IOContext(stdout, :displaysize => (10^6, 10^6)), "text/plain", value)
-end
-
-using HTTP, JSON, Dates
-import Printf.@sprintf
-
-# base URL of the Binance API
-const BINANCE_API_REST = "https://api.binance.com/api/v1/ticker/";
-
-# function HTTP response 2 JSON
-function r2j(response)
-    JSON.parse(String(response))
-end
-
-# retrieve data from binance for "allPrices", "24hr", "allBookTickers"
-function getBinanceDataFor(withSubject)
-    r = HTTP.request("GET", string(BINANCE_API_REST, withSubject))
-    r2j(r.body)
-end
-
-# current Binance market
-function getBinanceMarket()
-    r = HTTP.request("GET", "https://www.binance.com/exchange/public/product")
-    r2j(r.body)["data"]
-end
-
-# binance get candlesticks/klines data
-function getBinanceKline(symbol, startDateTime, endDateTime ; interval="1m")
-    startTime = @sprintf("%.0d",Dates.datetime2unix(startDateTime) * 1000)
-    endTime = @sprintf("%.0d",Dates.datetime2unix(endDateTime) * 1000)
-    query = string("symbol=", symbol, "&interval=", interval, "&startTime=", startTime, "&endTime=", endTime)
-    r = HTTP.request("GET", string("https://api.binance.com/api/v1/klines?",  query))
-    r2j(r.body)
-end
-
 function getBinanceKlineDataframe(symbol, startDateTime, endDateTime ; interval="1m")
-    klines = getBinanceKline(symbol, startDateTime, endDateTime; interval= interval)
+    klines = Binance.getKlines(symbol; startDateTime=startDateTime, endDateTime=endDateTime, interval= interval)
     result = hcat(map(z -> map(x -> typeof(x) == String ? parse(Float64, x) : x, z), klines)...)';
 
     #println(size(result))
@@ -130,26 +112,28 @@ function getBinanceKlineDataframe(symbol, startDateTime, endDateTime ; interval=
 end
 
 # getFloatValueArray
-getFloatValueArray(withKey, withDictArr) = map(dict -> parse(Float32, dict[withKey]) ,withDictArr)
-getStringValueArray(withKey, withDictArr) = map(dict -> convert(String, dict[withKey]) ,withDictArr)
-# filter
-filterOnRegex(matcher,withDictArr; withKey="symbol") = filter(x-> match(Regex(matcher), x[withKey]) != nothing, withDictArr);
+getFloatValueArray(withKey, withDictArr) = map(dict -> parse(Float32, dict[withKey]) ,withDictArr);
+getStringValueArray(withKey, withDictArr) = map(dict -> convert(String, dict[withKey]) ,withDictArr);
 ```
 
 ## Retrieve Market Symbols ending with BTC
 
 
 ```julia
-using DataFrames,Statistics;
+using DataFrames,Statistics, Dates,Binance;
 
 # get 24H tickerdata of all assets
-hr24 = getBinanceDataFor("24hr");
+hr24 = Binance.get24HR();
 # previous post we determined that BTC currency was the most obvious currency to tade in, most avalable symbols, second highest USDT $ volume.
-hr24BTC = filterOnRegex("BTC\$", hr24)
+hr24BTC = Binance.filterOnRegex("BTC\$", hr24)
 
 # all symbols ending with BTC
 symbols = sort!(getStringValueArray("symbol", hr24BTC));
 ```
+
+    ┌ Info: Recompiling stale cache file /Users/drutjes/.julia/compiled/v1.0/Binance/polIw.ji for Binance [840d5de0-b432-11e8-2099-35be2bba8ecc]
+    └ @ Base loading.jl:1184
+
 
 ## Retrieve Data with interval 1 month "1M" and 1 minute "1m"
 
@@ -187,7 +171,7 @@ alldata = by(res, :symbol, df -> DataFrame(current = df[:close][end], min = mini
 
 ```
 
-    retrieving data from binance 2018-09-09T12:42:44.868 for : ADABTC ADXBTC AEBTC AGIBTC AIONBTC AMBBTC APPCBTC ARDRBTC ARKBTC ARNBTC ASTBTC BATBTC BCCBTC BCDBTC BCNBTC BCPTBTC BLZBTC BNBBTC BNTBTC BQXBTC BRDBTC BTGBTC BTSBTC CDTBTC CHATBTC CLOAKBTC CMTBTC CNDBTC CVCBTC DASHBTC DATABTC DENTBTC DGDBTC DLTBTC DNTBTC DOCKBTC EDOBTC ELFBTC ENGBTC ENJBTC EOSBTC ETCBTC ETHBTC EVXBTC FUELBTC FUNBTC GASBTC GNTBTC GRSBTC GTOBTC GVTBTC GXSBTC HCBTC HOTBTC HSRBTC ICNBTC ICXBTC INSBTC IOSTBTC IOTABTC IOTXBTC KEYBTC KMDBTC KNCBTC LENDBTC LINKBTC LOOMBTC LRCBTC LSKBTC LTCBTC LUNBTC MANABTC MCOBTC MDABTC MFTBTC MODBTC MTHBTC MTLBTC NANOBTC NASBTC NAVBTC NCASHBTC NEBLBTC NEOBTC NPXSBTC NULSBTC NXSBTC OAXBTC OMGBTC ONTBTC OSTBTC PHXBTC PIVXBTC POABTC POEBTC POLYBTC POWRBTC PPTBTC QKCBTC QLCBTC QSPBTC QTUMBTC RCNBTC RDNBTC REPBTC REQBTC RLCBTC RPXBTC SALTBTC SCBTC SKYBTC SNGLSBTC SNMBTC SNTBTC STEEMBTC STORJBTC STORMBTC STRATBTC SUBBTC SYSBTC THETABTC TNBBTC TNTBTC TRIGBTC TRXBTC TUSDBTC VENBTC VETBTC VIABTC VIBBTC VIBEBTC WABIBTC WANBTC WAVESBTC WINGSBTC WPRBTC WTCBTC XEMBTC XLMBTC XMRBTC XRPBTC XVGBTC XZCBTC YOYOBTC ZECBTC ZENBTC ZILBTC ZRXBTC
+    retrieving data from binance 2018-09-09T18:53:17.593 for : ADABTC ADXBTC AEBTC AGIBTC AIONBTC AMBBTC APPCBTC ARDRBTC ARKBTC ARNBTC ASTBTC BATBTC BCCBTC BCDBTC BCNBTC BCPTBTC BLZBTC BNBBTC BNTBTC BQXBTC BRDBTC BTGBTC BTSBTC CDTBTC CHATBTC CLOAKBTC CMTBTC CNDBTC CVCBTC DASHBTC DATABTC DENTBTC DGDBTC DLTBTC DNTBTC DOCKBTC EDOBTC ELFBTC ENGBTC ENJBTC EOSBTC ETCBTC ETHBTC EVXBTC FUELBTC FUNBTC GASBTC GNTBTC GRSBTC GTOBTC GVTBTC GXSBTC HCBTC HOTBTC HSRBTC ICNBTC ICXBTC INSBTC IOSTBTC IOTABTC IOTXBTC KEYBTC KMDBTC KNCBTC LENDBTC LINKBTC LOOMBTC LRCBTC LSKBTC LTCBTC LUNBTC MANABTC MCOBTC MDABTC MFTBTC MODBTC MTHBTC MTLBTC NANOBTC NASBTC NAVBTC NCASHBTC NEBLBTC NEOBTC NPXSBTC NULSBTC NXSBTC OAXBTC OMGBTC ONTBTC OSTBTC PHXBTC PIVXBTC POABTC POEBTC POLYBTC POWRBTC PPTBTC QKCBTC QLCBTC QSPBTC QTUMBTC RCNBTC RDNBTC REPBTC REQBTC RLCBTC RPXBTC SALTBTC SCBTC SKYBTC SNGLSBTC SNMBTC SNTBTC STEEMBTC STORJBTC STORMBTC STRATBTC SUBBTC SYSBTC THETABTC TNBBTC TNTBTC TRIGBTC TRXBTC TUSDBTC VENBTC VETBTC VIABTC VIBBTC VIBEBTC WABIBTC WANBTC WAVESBTC WINGSBTC WPRBTC WTCBTC XEMBTC XLMBTC XMRBTC XRPBTC XVGBTC XZCBTC YOYOBTC ZECBTC ZENBTC ZILBTC ZRXBTC
 
 ## sort on volume/trades
 
@@ -203,5 +187,5 @@ sort!(alldata, [:volume,:trades]; rev=true);
 head(sort(alldata[1:40,:], [:changeMin]; rev=false))
 ```
 
+<table class="data-frame"><thead><tr><th></th><th>symbol</th><th>current</th><th>min</th><th>changeMin</th><th>max</th><th>changeMax</th><th>trades</th><th>volume</th></tr></thead><tbody><tr><th>1</th><td>ADABTC</td><td>1.227e-5</td><td>1.201e-5</td><td>2.16486</td><td>4.19e-5</td><td>70.716</td><td>10013620</td><td>2.03832e10</td></tr><tr><th>2</th><td>FUNBTC</td><td>2.23e-6</td><td>2.17e-6</td><td>2.76498</td><td>6.51e-6</td><td>65.745</td><td>1659651</td><td>6.09706e9</td></tr><tr><th>3</th><td>SNGLSBTC</td><td>2.91e-6</td><td>2.83e-6</td><td>2.82686</td><td>2.295e-5</td><td>87.3203</td><td>1185198</td><td>2.31789e9</td></tr><tr><th>4</th><td>GTOBTC</td><td>1.002e-5</td><td>9.69e-6</td><td>3.40557</td><td>6.95e-5</td><td>85.5827</td><td>2833881</td><td>3.14644e9</td></tr><tr><th>5</th><td>LENDBTC</td><td>1.83e-6</td><td>1.76e-6</td><td>3.97727</td><td>1.086e-5</td><td>83.1492</td><td>1264670</td><td>3.55641e9</td></tr><tr><th>6</th><td>POEBTC</td><td>1.26e-6</td><td>1.2e-6</td><td>5.0</td><td>6.79e-6</td><td>81.4433</td><td>2420694</td><td>1.79134e10</td></tr></tbody></table>
 
-<table class="data-frame"><thead><tr><th></th><th>symbol</th><th>current</th><th>min</th><th>changeMin</th><th>max</th><th>changeMax</th><th>trades</th><th>volume</th></tr></thead><tbody><tr><th>1</th><td>ADABTC</td><td>1.228e-5</td><td>1.201e-5</td><td>2.24813</td><td>4.19e-5</td><td>70.6921</td><td>10002842</td><td>2.03433e10</td></tr><tr><th>2</th><td>WPRBTC</td><td>2.68e-6</td><td>2.61e-6</td><td>2.68199</td><td>1.905e-5</td><td>85.9318</td><td>1806944</td><td>2.37861e9</td></tr><tr><th>3</th><td>LENDBTC</td><td>1.81e-6</td><td>1.76e-6</td><td>2.84091</td><td>1.086e-5</td><td>83.3333</td><td>1264368</td><td>3.55447e9</td></tr><tr><th>4</th><td>SNGLSBTC</td><td>2.92e-6</td><td>2.83e-6</td><td>3.18021</td><td>2.295e-5</td><td>87.2767</td><td>1184982</td><td>2.31718e9</td></tr><tr><th>5</th><td>FUNBTC</td><td>2.25e-6</td><td>2.17e-6</td><td>3.68664</td><td>6.51e-6</td><td>65.4378</td><td>1659178</td><td>6.09257e9</td></tr><tr><th>6</th><td>VIBBTC</td><td>4.81e-6</td><td>4.63e-6</td><td>3.88769</td><td>2.9e-5</td><td>83.4138</td><td>1143303</td><td>2.57617e9</td></tr></tbody></table>
