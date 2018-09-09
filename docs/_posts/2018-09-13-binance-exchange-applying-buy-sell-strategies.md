@@ -10,7 +10,7 @@ header:
   overlay_image: "/assets/images/binance-web-interface.jpg"
   caption: 
   overlay_filter: rgba(37, 42, 52, 0.5)
-  teaser: "/assets/images/julia-logo.svg"
+  teaser: "/assets/images/rockbottom.png"
 excerpt: 'This weekly blog series is a journey into crypto currency trading for beginners,
   this week: what should I buy ?'
 classes: wide
@@ -20,7 +20,7 @@ tags: cryptocurrency julia binance api
 
 # Intro
 The focus of this weekly blog series will shift to analyzing strategies for buying/selling assets. 
-To see whether the strategy pans out or not a longer validation period is required and the results get posted (bi-)monthly.
+To see whether the strategy pans out or not, a longer validation period is required and the results get posted (bi-)monthly.
 
 So without further ado the first simple strategy.
 # Follow the loser strategy, is it a winner?
@@ -32,13 +32,13 @@ Why not investigate which assets are relatively low compared to their historic m
 1. we will be using BTC as a base currency, see the previous post
 1. select TOP 40 of the highest trade volumes, higher volumes give us a greater chance of buying/selling at market price
 1. sort the previous result based upon how close they to the minimum of the last 6 months
-1. analyze top 5 of the results and by 50% of the BTC volume if you think that the asset has hit rock bottom, apply this for a maximum of 3 to 5 assets depending on the BTC budget.
+1. analyze top 5 of the results and by 50% of the BTC volume if you think that the asset has hit rock bottom (bollinger lower band), apply this for a maximum of 3 to 5 assets depending on the BTC budget. 
 1. create a limit order 1,05 of the buy value aiming for roughly a 5% profit, keep in mind for limit order the total value must be > 0.001 BTC
 1. when a limit order has been fulfilled, rinse and repeat.
 
 
 when using a notebook server : [Jupyter NoteBook](https://github.com/DennisRutjes/cryptocurrency.ramblings/blob/master/julia/notebooks/whattotrade.ipynb)
-,you will find the code snippets to copy past in to your favourite IDE (shift-enter to run) at the end of this blog.
+, you will find the code snippets to copy past in to your favourite IDE (shift-enter to run) at the end of this blog.
 
 steps 1 through 3 are solved using julia :
 
@@ -52,6 +52,8 @@ steps 1 through 3 are solved using julia :
     
 
 step 4: seems ADABTC is a good candidate! lets go with that one!
+
+![ADABTC Rock bottom]({{ "/assets/images/rockbottom.png" | relative_url }})
 
 steps 5 and 6 will be done during this month, the results will be posted next month or so, see you then!
 
@@ -205,5 +207,3 @@ head(sort(alldata[1:40,:], [:changeMin]; rev=false))
 
 
 <table class="data-frame"><thead><tr><th></th><th>symbol</th><th>current</th><th>min</th><th>changeMin</th><th>max</th><th>changeMax</th><th>trades</th><th>volume</th></tr></thead><tbody><tr><th>1</th><td>ADABTC</td><td>1.228e-5</td><td>1.201e-5</td><td>2.24813</td><td>4.19e-5</td><td>70.6921</td><td>10002842</td><td>2.03433e10</td></tr><tr><th>2</th><td>WPRBTC</td><td>2.68e-6</td><td>2.61e-6</td><td>2.68199</td><td>1.905e-5</td><td>85.9318</td><td>1806944</td><td>2.37861e9</td></tr><tr><th>3</th><td>LENDBTC</td><td>1.81e-6</td><td>1.76e-6</td><td>2.84091</td><td>1.086e-5</td><td>83.3333</td><td>1264368</td><td>3.55447e9</td></tr><tr><th>4</th><td>SNGLSBTC</td><td>2.92e-6</td><td>2.83e-6</td><td>3.18021</td><td>2.295e-5</td><td>87.2767</td><td>1184982</td><td>2.31718e9</td></tr><tr><th>5</th><td>FUNBTC</td><td>2.25e-6</td><td>2.17e-6</td><td>3.68664</td><td>6.51e-6</td><td>65.4378</td><td>1659178</td><td>6.09257e9</td></tr><tr><th>6</th><td>VIBBTC</td><td>4.81e-6</td><td>4.63e-6</td><td>3.88769</td><td>2.9e-5</td><td>83.4138</td><td>1143303</td><td>2.57617e9</td></tr></tbody></table>
-
-
