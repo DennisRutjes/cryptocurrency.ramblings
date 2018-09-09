@@ -37,7 +37,7 @@ Why not investigate which assets are relatively low compared to their historic m
 
 
 when using a notebook server : [Jupyter NoteBook](https://github.com/DennisRutjes/cryptocurrency.ramblings/blob/master/julia/notebooks/whattotrade.ipynb)
-, you will find the code snippets to copy past in to your favourite IDE (shift-enter to run) at the end of this blog.
+, you will find the code snippets to copy paste in to your favourite IDE (shift-enter to run) at the end of this blog.
 
 steps 1 through 3 are solved using julia :
 
