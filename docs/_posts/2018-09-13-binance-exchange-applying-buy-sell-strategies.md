@@ -50,7 +50,7 @@ steps 1 through 3 are solved using julia :
     | 5   | GTOBTC   | 1.01e-5  | 9.69e-6  | 4.23117   | 6.95e-5    | 85.4676   | 2831588  | 3.14215e9  |
     
 
-step 4: seems ADABTC is a good candidate! lets go with that one!
+step 4: seems ADABTC is a good candidate, lets go with that one!
 
 ![ADABTC Rock bottom]({{ "/assets/images/rockbottom.png" | relative_url }})
 
