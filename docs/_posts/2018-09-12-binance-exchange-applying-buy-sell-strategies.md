@@ -32,7 +32,7 @@ Why not investigate which assets are relatively low compared to their historic m
 1. select TOP 40 of the highest trade volumes, higher volumes give us a greater chance of buying/selling at market price
 1. sort the previous result based upon how close they to the minimum of the last 6 months
 1. analyze top 5 of the results and by 50% of the BTC volume if you think that the asset has hit rock bottom (bollinger lower band), apply this for a maximum of 3 to 5 assets depending on the BTC budget. 
-1. create a limit order 1,05 of the buy value aiming for roughly a 5% profit, keep in mind for limit order the total value must be > 0.001 BTC
+1. create a limit order 1,03 of the buy value aiming for roughly a 3% profit, keep in mind for limit order the total value must be > 0.001 BTC
 1. when a limit order has been fulfilled, rinse and repeat.
 
 
