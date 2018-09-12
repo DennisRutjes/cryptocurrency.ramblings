@@ -118,7 +118,6 @@ getStringValueArray(withKey, withDictArr) = map(dict -> convert(String, dict[wit
 
 ## Retrieve Market Symbols ending with BTC
 
-
 ```julia
 using DataFrames,Statistics, Dates,Binance;
 
